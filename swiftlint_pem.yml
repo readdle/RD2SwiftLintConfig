@@ -1,7 +1,3 @@
-included:
- - PDFExpertMac
- - PDF Expert Tests
- 
 # xcodebuild -scheme 'PDF Expert Dmg' -configuration Debug > xcodebuild.log
 # swiftlint analyze --compiler-log-path xcodebuild.log --quiet --output analyze_results.txt
 analyzer_rules:
