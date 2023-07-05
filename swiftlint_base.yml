@@ -24,7 +24,6 @@ opt_in_rules:
 - file_types_order
 - modifier_order
 - protocol_property_accessors_order
-- type_contents_order
 - weak_delegate
 statement_position:
   statement_mode: uncuddled_else
