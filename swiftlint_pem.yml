@@ -7,7 +7,7 @@ analyzer_rules:
 
 opt_in_rules:
  - accessibility_label_for_image
- # - accessibility_trait_for_button
+ - accessibility_trait_for_button
  - anyobject_protocol
  - array_init
  - balanced_xctest_lifecycle
@@ -40,7 +40,7 @@ opt_in_rules:
  - last_where
  - legacy_multiple
  - let_var_whitespace
- # - local_doc_comment
+ - local_doc_comment
  - lower_acl_than_parent
  - missing_docs
  - modifier_order
@@ -56,7 +56,7 @@ opt_in_rules:
  - overridden_super_call
  - override_in_extension
  - pattern_matching_keywords
- # - period_spacing
+ - period_spacing
  - prefer_self_in_static_references
  - prefer_self_type_over_type_of_self
  - prefer_zero_over_explicit_init
@@ -70,7 +70,7 @@ opt_in_rules:
  - required_enum_case
  - return_value_from_void_function
  - self_binding
- # - shorthand_optional_binding
+ - shorthand_optional_binding
  - single_test_class
  - sorted_first_last
  - static_operator
@@ -89,8 +89,8 @@ opt_in_rules:
  - xct_specific_matcher
 
 disabled_rules:
- # - blanket_disable_command
- # - duplicate_conditions
+ - blanket_disable_command
+ - duplicate_conditions
  - line_length
  - file_length
  - function_body_length
