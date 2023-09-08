@@ -8,7 +8,6 @@ analyzer_rules:
 opt_in_rules:
  - accessibility_label_for_image
  - accessibility_trait_for_button
- - anyobject_protocol
  - array_init
  - balanced_xctest_lifecycle
  - closure_end_indentation
@@ -36,7 +35,6 @@ opt_in_rules:
  - joined_default_parameter
  - ibinspectable_in_extension
  - identical_operands
- - inert_defer
  - last_where
  - legacy_multiple
  - let_var_whitespace
@@ -82,7 +80,6 @@ opt_in_rules:
  - unneeded_parentheses_in_closure_argument
  - unowned_variable_capture
  - untyped_error_in_catch
- - unused_capture_list
  - vertical_whitespace_between_cases
  - vertical_whitespace_closing_braces
  - weak_delegate
