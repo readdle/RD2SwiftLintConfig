@@ -31,6 +31,7 @@ opt_in_rules:
  - fatal_error_message
  - file_name_no_space
  - first_where
+ - force_unwrapping
  - flatmap_over_map_reduce
  - joined_default_parameter
  - ibinspectable_in_extension
@@ -71,6 +72,7 @@ opt_in_rules:
  - shorthand_optional_binding
  - single_test_class
  - sorted_first_last
+ - statement_position
  - static_operator
  - strong_iboutlet
  - switch_case_on_newline
@@ -102,6 +104,9 @@ disabled_rules:
  - type_name
  - unused_setter_value
 
+statement_position:
+  statement_mode: uncuddled_else
+
 trailing_comma:
   mandatory_comma: true
 
@@ -127,4 +132,4 @@ identifier_name:
     - x
     - "y"
     - "no"
-    - "_[a-zA-Z0-9]+" # Swiftlint 0.49.1 does not support regexes yet
+    - "_[a-zA-Z0-9]+"
