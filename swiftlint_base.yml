@@ -32,3 +32,18 @@ custom_rules:
     regex: 'NSLocalizedString\("[^"]*\\\(\S*\)'
     message: "Localized strings must not use interpolated variables. Instead, use `String(format:`"
     severity: error
+
+  no_programmatic_quotation_marks:
+    included: ".*\\.swift"
+    regex: '"[^"\n]*\\"[^"\n]*"'
+    name: "No Programmatic Quotation Marks in Strings"
+    message: "Use typographic quotation marks (“) for general text, except code and special cases."
+    severity: error
+    #special cases - https://support.apple.com/uk-ua/guide/applestyleguide/q-apsg38496e66/1.0/web/1.0#apd29c9f643d5434
+
+  no_straight_apostrophe:
+    included: ".*\\.swift"
+    regex: '(?<!\b((assertionFailure|fatalError)\())"[^"\n]*''[^"\n]*"'
+    name: "No Straight Apostrophe in Strings"
+    message: "Use typographic apostrophes (’) for general text, except code font and units of measure."
+    severity: error
