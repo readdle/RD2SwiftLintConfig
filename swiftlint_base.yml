@@ -36,14 +36,14 @@ custom_rules:
   no_programmatic_quotation_marks:
     included: ".*\\.swift"
     name: "No Programmatic Quotation Marks in Strings"
-    regex: '"[^"\n]*\\"[^"\n]*"'
-    message: "Use typographic quotation marks (“) for general text, except code and special cases."
+    regex: 'NSLocalizedString\("[^"\n]*\\"[^"\n]*"'
+    message: "Use typographic quotation marks (“) for localized text, except code and special cases."
     severity: error
     #special cases - https://support.apple.com/uk-ua/guide/applestyleguide/q-apsg38496e66/1.0/web/1.0#apd29c9f643d5434
 
   no_straight_apostrophe_or_backtick:
     included: ".*\\.swift"
     name: "No Straight Apostrophe or Backtick in Strings"
-    regex: '(?<!\b((assertionFailure|fatalError)\())"[^"\n]*[''`][^"\n]*"'
-    message: "Use typographic apostrophe (’) for general text, except code font and units of measure."
+    regex: 'NSLocalizedString\("[^"\n]*[''`][^"\n]*"'
+    message: "Use typographic apostrophe (’) for localized text, except code font and units of measure."
     severity: error
