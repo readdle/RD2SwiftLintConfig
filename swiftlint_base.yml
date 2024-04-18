@@ -35,7 +35,7 @@ custom_rules:
 
   no_programmatic_quotation_marks:
     name: "No Programmatic Quotation Marks in Strings"
-    regex: 'NSLocalizedString\(\s*"[^"\n]*\\"[^"\n]*'
+    regex: '((NSLocalizedString\(|LocalizedStringResource\s*=|IntentDescription\s*=|shortTitle\s*:)\s*"[^"\n]*\\"[^"\n]*")|(phrases:\s*\[\s*.*"[^"]*\\"[^"]*".*)'
     message: "Use typographic quotation marks (“) for localized text, except code and special cases."
     severity: error
     # Use curly quotation marks(”) (Option-Shift-Left Bracket) except units of measure.
@@ -44,7 +44,7 @@ custom_rules:
 
   no_straight_apostrophe_or_backtick:
     name: "No Straight Apostrophe or Backtick in Strings"
-    regex: 'NSLocalizedString\(\s*"[^"\n]*[''`][^"\n]*"'
+    regex: '((NSLocalizedString\(|LocalizedStringResource\s*=|IntentDescription\s*=|shortTitle\s*:)\s*"[^"\n]*[''`][^"\n]*")|(phrases:\s*\[\s*.*"[^"]*[''`][^"]*".*)'
     message: "Use typographic apostrophe (’) for localized text, except code font and units of measure."
     severity: error
     # Use curly apostrophe(’) (Option-Shift-Right Bracket) except units of measure.
