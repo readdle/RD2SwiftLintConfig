@@ -129,6 +129,7 @@ identifier_name:
     - ok
     - cc
     - x
+    - qa
     - "y"
     - "no"
     - "_[a-zA-Z0-9]+"
