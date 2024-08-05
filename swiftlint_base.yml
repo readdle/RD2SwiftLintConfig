@@ -8,11 +8,14 @@ disabled_rules:
 - file_length
 - no_fallthrough_only
 identifier_name:
-  excluded:
-  - id
-  - "_[a-zA-Z0-9]+"
   min_length: 3
   max_length: 75
+  excluded:
+    - id
+    - x
+    - y
+    - "_[a-zA-Z0-9]+"
+  
 opt_in_rules:
 - empty_collection_literal
 - empty_count
