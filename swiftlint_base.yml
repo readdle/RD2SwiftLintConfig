@@ -26,6 +26,11 @@ opt_in_rules:
 - weak_delegate
 statement_position:
   statement_mode: uncuddled_else
+
+function_body_length:
+    warning: 50
+    error: 50
+  
 custom_rules:
   string_interpolation_in_localized_string:
     name: "String Interpolation in Localized String"
