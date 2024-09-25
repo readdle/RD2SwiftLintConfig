@@ -133,6 +133,10 @@ identifier_name:
     - "no"
     - "_[a-zA-Z0-9]+"
 
+function_body_length:
+  warning: 50
+  error: 50
+
 custom_rules:
   string_interpolation_in_localized_string:
     name: "String Interpolation in Localized String"
