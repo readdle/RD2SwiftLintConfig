@@ -1,5 +1,6 @@
 analyzer_rules:
 - explicit_self
+
 disabled_rules:
 - trailing_whitespace
 - todo
@@ -7,12 +8,15 @@ disabled_rules:
 - type_body_length
 - file_length
 - no_fallthrough_only
+- for_where
+
 identifier_name:
   excluded:
   - id
   - "_[a-zA-Z0-9]+"
   min_length: 3
   max_length: 75
+
 opt_in_rules:
 - empty_collection_literal
 - empty_count
@@ -24,11 +28,34 @@ opt_in_rules:
 - file_types_order
 - modifier_order
 - weak_delegate
+
+nesting:
+  type_level: 3
+
 statement_position:
   statement_mode: uncuddled_else
+
 custom_rules:
   string_interpolation_in_localized_string:
     name: "String Interpolation in Localized String"
     regex: 'NSLocalizedString\("[^"]*\\\(\S*\)'
     message: "Localized strings must not use interpolated variables. Instead, use `String(format:`"
     severity: error
+
+  no_programmatic_quotation_marks:
+    name: "No Programmatic Quotation Marks in Strings"
+    regex: '((NSLocalizedString\(|LocalizedStringResource\s*=|IntentDescription\s*=|shortTitle\s*:)\s*"[^"\n]*\\"[^"\n]*")|(phrases:\s*\[\s*.*"[^"]*\\"[^"]*".*)'
+    message: "Use typographic quotation marks (“) for localized text, except code and special cases."
+    severity: error
+    # Use curly quotation marks(”) (Option-Shift-Left Bracket) except units of measure.
+    # Use double prime symbol(˝) for inches (Option-Shift-G).
+    # https://support.apple.com/uk-ua/guide/applestyleguide/q-apsg38496e66/1.0/web/1.0#apd29c9f643d5434
+
+  no_straight_apostrophe_or_backtick:
+    name: "No Straight Apostrophe or Backtick in Strings"
+    regex: '((NSLocalizedString\(|LocalizedStringResource\s*=|IntentDescription\s*=|shortTitle\s*:)\s*"[^"\n]*[''`][^"\n]*")|(phrases:\s*\[\s*.*"[^"]*[''`][^"]*".*)'
+    message: "Use typographic apostrophe (’) for localized text, except code font and units of measure."
+    severity: error
+    # Use curly apostrophe(’) (Option-Shift-Right Bracket) except units of measure.
+    # Use prime symbol(´) for feet (Option-Shift-E).
+    # https://support.apple.com/uk-ua/guide/applestyleguide/apsg3acde405/1.0/web/1.0#apd1d1eb8bec58f4
