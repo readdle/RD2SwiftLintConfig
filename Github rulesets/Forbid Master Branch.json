@@ -1,0 +1,28 @@
+{
+  "id": 1247771,
+  "name": "Forbid Master Branch",
+  "target": "branch",
+  "source_type": "Repository",
+  "source": "readdle/repo",
+  "enforcement": "active",
+  "conditions": {
+    "ref_name": {
+      "exclude": [],
+      "include": [
+        "refs/heads/master"
+      ]
+    }
+  },
+  "rules": [
+    {
+      "type": "non_fast_forward"
+    },
+    {
+      "type": "update"
+    },
+    {
+      "type": "creation"
+    }
+  ],
+  "bypass_actors": []
+}
